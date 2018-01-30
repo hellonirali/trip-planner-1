@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Trip Planner</title>
-    <link rel="stylesheet" href="./style.css"></link>
-    <script src="./bundle.js" defer></script>
-  </head>
-  <body>
-    <div id="map"></div>
-  </body>
+
+<head>
+  <title>Trip Planner</title>
+  <link rel="stylesheet" href="./style.css"></link>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet'/>
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+
+  <script src="./bundle.js" defer></script>
+</head>
+
+<body>
+  <div class="row-container">
+    <div class="column-container">
+      <div id="header">
+        <header>
+          <h1>TripPlanner</h1>
+        </header>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="map"></div>
+    </div>
+
+
+    <div class="column-container">
+      <div id="options">
+        <div class="option">
+          <h2>Hotels</h2>
+          <select name="hotel">
+            <option value="langham">The Langham</option>
+            <option value="peninsula">the Peninsula</option>
+            <option value="four-seasons">Four Seasons</option>
+          </select>
+          <a class="add-button" href="#">
+            <img src="./img/add-button.png">
+          </a>
+        </div>
+        <div class="option">
+          <h2>Restaurants</h2>
+          <select name="restaurants">
+            <option value="girl-and-the-goat">Girl and the Goat</option>
+            <option value="alinea">Alinea</option>
+            <option value="rpm">RPM</option>
+          </select>
+          <a class="add-button" href="#">
+            <img src="./img/add-button.png">
+          </a>
+        </div>
+        <div class="option">
+          <h2>Activities</h2>
+          <select name="activities">
+            <option value="bean">The Bean</option>
+            <option value="navy-pier">Navy Pier</option>
+            <option value="second-city">Second City</option>
+          </select>
+          <a class="add-button" href="#">
+            <img src="./img/add-button.png">
+          </a>
+        </div>
+      </div>
+
+      <div id="itinerary">
+        <h2>My Hotel</h2>
+        <ul>
+          <li>The Langham
+            <a class="remove-button" href="#">
+              <img src="./img/remove-button.png">
+            </a>
+          </li>
+        </ul>
+        <h2>My Restaurants</h2>
+        <ul>
+          <li>Girl and the Goat
+            <a class="remove-button" href="#">
+              <img src="./img/remove-button.png">
+            </a>
+          </li>
+        </ul>
+        <h2>My Activities</h2>
+        <ul>
+          <li>Second City
+            <a class="remove-button" href="#">
+              <img src="./img/remove-button.png">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
